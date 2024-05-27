@@ -497,6 +497,37 @@ System::Void Lab10::MyForm::p_addDeque_btn_Click(System::Object^ sender, System:
 	UpdatePolynomResultLabel();
 }
 
+System::Void Lab10::MyForm::f_FindElem_btn_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	float elemToFind = Convert::ToDouble(f_elemToFind_txtbox->Text);
+	int res = FindElementInArray(floatDeque[FloatSelectedIndex], floatDeque[FloatSelectedIndex].get_maxsize(), elemToFind);
+	if (res == floatDeque[FloatSelectedIndex].get_maxsize())
+	{
+		MessageBox::Show("No such element in deque");
+	}
+	else
+	{
+		MessageBox::Show("Such element has " + Convert::ToString(res) + " index");
+	}
+}
+
+System::Void Lab10::MyForm::p_findElem_btn_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	double A = Convert::ToDouble(p_elemToFind_txtbox->Text->Split()[0]);
+	double B = Convert::ToDouble(p_elemToFind_txtbox->Text->Split()[1]);
+	double C = Convert::ToDouble(p_elemToFind_txtbox->Text->Split()[2]);
+	CPolynom3 polToFind(A, B, C);
+	int res = FindElementInArray(polynomDeque[PolynomSelectedIndex], polynomDeque[PolynomSelectedIndex].get_maxsize(), polToFind);
+	if (res == polynomDeque[FloatSelectedIndex].get_maxsize())
+	{
+		MessageBox::Show("No such element in deque");
+	}
+	else
+	{
+		MessageBox::Show("Such element has " + Convert::ToString(res) + " index");
+	}
+}
+
 System::Void Lab10::MyForm::p_subtractDeque_btn_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	try

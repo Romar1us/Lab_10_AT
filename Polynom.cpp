@@ -20,15 +20,15 @@ CPolynom3::CPolynom3(double value_a, double value_b, double value_c)
 }
 
 void CPolynom3::set_a(double value_a) { a = value_a; }
-double CPolynom3::get_a() { return a; }
+double CPolynom3::get_a() const { return a; }
 
 void CPolynom3::set_b(double value_b) { b = value_b; }
 
-double CPolynom3::get_b() { return b; }
+double CPolynom3::get_b() const { return b; }
 
 void CPolynom3::set_c(double value_c) { c = value_c; }
 
-double CPolynom3::get_c() { return c; }
+double CPolynom3::get_c() const { return c; }
 
 void CPolynom3::set_x_3(double value_x_3) { x_3 = value_x_3; }
 
@@ -116,4 +116,16 @@ std::ostream& operator<<(std::ostream& os, CPolynom3& obj)
 {
 	os << "(" << obj.a << ", " << obj.b << ", " << obj.c << ")";
 	return os;
+}
+
+bool operator==(const CPolynom3& object, const CPolynom3& other)
+{
+	if (object.get_a() == other.get_a() && object.get_b() == other.get_b() && object.get_c() == other.get_c())
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

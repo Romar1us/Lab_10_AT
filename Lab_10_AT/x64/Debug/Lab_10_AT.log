@@ -9,22 +9,34 @@ C:\Users\Roman\Labs\Lab_10_AT\MyForm.cpp(192,60): warning C4244:         with
 C:\Users\Roman\Labs\Lab_10_AT\MyForm.cpp(192,60): warning C4244:         [
 C:\Users\Roman\Labs\Lab_10_AT\MyForm.cpp(192,60): warning C4244:             T=float
 C:\Users\Roman\Labs\Lab_10_AT\MyForm.cpp(192,60): warning C4244:         ]
-C:\Users\Roman\Labs\Lab_10_AT\deque.h(249,35): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
-C:\Users\Roman\Labs\Lab_10_AT\deque.h(249,35): warning C4244:         with
-C:\Users\Roman\Labs\Lab_10_AT\deque.h(249,35): warning C4244:         [
-C:\Users\Roman\Labs\Lab_10_AT\deque.h(249,35): warning C4244:             T=float
-C:\Users\Roman\Labs\Lab_10_AT\deque.h(249,35): warning C4244:         ]
+C:\Users\Roman\Labs\Lab_10_AT\MyForm.cpp(502,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Roman\Labs\Lab_10_AT\deque.h(88,10): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'MyForm.cpp')
-  C:\Users\Roman\Labs\Lab_10_AT\deque.h(249,35):
+  C:\Users\Roman\Labs\Lab_10_AT\deque.h(88,10):
   the template instantiation context (the oldest one first) is
-  	C:\Users\Roman\Labs\Lab_10_AT\MyForm.cpp(15,19):
-  	see reference to class template instantiation 'CDeque<float>' being compiled
-  	C:\Users\Roman\Labs\Lab_10_AT\deque.h(246,1):
+  	C:\Users\Roman\Labs\Lab_10_AT\MyForm.cpp(17,21):
+  	see reference to class template instantiation 'CDeque<CPolynom3>' being compiled
+  	C:\Users\Roman\Labs\Lab_10_AT\deque.h(79,13):
+  	while compiling class template member function 'int FindElementInArray(CDeque<CPolynom3>,size_t,T)'
+          with
+          [
+              T=CPolynom3
+          ]
+  		C:\Users\Roman\Labs\Lab_10_AT\MyForm.cpp(520,10):
+  		see the first reference to 'FindElementInArray' in 'Lab10::MyForm::p_findElem_btn_Click'
+  
+C:\Users\Roman\Labs\Lab_10_AT\deque.h(261,35): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+C:\Users\Roman\Labs\Lab_10_AT\deque.h(261,35): warning C4244:         with
+C:\Users\Roman\Labs\Lab_10_AT\deque.h(261,35): warning C4244:         [
+C:\Users\Roman\Labs\Lab_10_AT\deque.h(261,35): warning C4244:             T=float
+C:\Users\Roman\Labs\Lab_10_AT\deque.h(261,35): warning C4244:         ]
+  (compiling source file 'MyForm.cpp')
+  C:\Users\Roman\Labs\Lab_10_AT\deque.h(261,35):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\Roman\Labs\Lab_10_AT\deque.h(258,1):
   	while compiling class template member function 'CDeque<float> CDeque<float>::operator *(double) noexcept'
   		C:\Users\Roman\Labs\Lab_10_AT\MyForm.cpp(255,33):
   		see the first reference to 'CDeque<float>::operator *' in 'Lab10::MyForm::f_productBy_btn_Click'
   
-  main.cpp
-  Generating Code...
   Exception.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Lab_10_AT.vcxproj -> C:\Users\Roman\Labs\Lab_10_AT\x64\Debug\Lab_10_AT.exe

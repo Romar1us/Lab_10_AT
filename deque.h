@@ -75,6 +75,18 @@ public:
 		}
 		return in;
 	}
+	
+	friend int FindElementInArray(CDeque<T> arr, size_t size, T element)
+	{
+		for (int i = 0; i < size; i++)
+		{
+			if (arr.elements[i] == element)
+			{
+				return i;
+			}
+		}
+		return size;
+	}
 };
 
 #endif

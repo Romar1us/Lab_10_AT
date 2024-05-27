@@ -146,7 +146,7 @@ private: System::Windows::Forms::RadioButton^ p_firstDeque_rb;
 
 
 private: System::Windows::Forms::Button^ p_clean_btn;
-private: System::Windows::Forms::Button^ p_avg_btn;
+
 
 
 private: System::Windows::Forms::Button^ p_Size_btn;
@@ -161,6 +161,13 @@ private: System::Windows::Forms::Button^ p_addLeft_btn;
 
 private: System::Windows::Forms::TextBox^ p_newVal_txtbox;
 private: System::Windows::Forms::Label^ p_firstDequeLabel;
+private: System::Windows::Forms::TextBox^ f_elemToFind_txtbox;
+private: System::Windows::Forms::Button^ f_FindElem_btn;
+
+
+private: System::Windows::Forms::Button^ p_avg_btn;
+private: System::Windows::Forms::TextBox^ p_elemToFind_txtbox;
+private: System::Windows::Forms::Button^ p_findElem_btn;
 
 
 
@@ -218,6 +225,8 @@ private: System::Windows::Forms::Label^ p_firstDequeLabel;
 		{
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->floatPage = (gcnew System::Windows::Forms::TabPage());
+			this->f_elemToFind_txtbox = (gcnew System::Windows::Forms::TextBox());
+			this->f_FindElem_btn = (gcnew System::Windows::Forms::Button());
 			this->f_resultLabel = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->f_scalar_tb = (gcnew System::Windows::Forms::TextBox());
@@ -271,6 +280,8 @@ private: System::Windows::Forms::Label^ p_firstDequeLabel;
 			this->p_addLeft_btn = (gcnew System::Windows::Forms::Button());
 			this->p_newVal_txtbox = (gcnew System::Windows::Forms::TextBox());
 			this->p_firstDequeLabel = (gcnew System::Windows::Forms::Label());
+			this->p_elemToFind_txtbox = (gcnew System::Windows::Forms::TextBox());
+			this->p_findElem_btn = (gcnew System::Windows::Forms::Button());
 			this->tabControl1->SuspendLayout();
 			this->floatPage->SuspendLayout();
 			this->boolPage->SuspendLayout();
@@ -291,6 +302,8 @@ private: System::Windows::Forms::Label^ p_firstDequeLabel;
 			// floatPage
 			// 
 			this->floatPage->BackColor = System::Drawing::Color::LightSlateGray;
+			this->floatPage->Controls->Add(this->f_elemToFind_txtbox);
+			this->floatPage->Controls->Add(this->f_FindElem_btn);
 			this->floatPage->Controls->Add(this->f_resultLabel);
 			this->floatPage->Controls->Add(this->label4);
 			this->floatPage->Controls->Add(this->f_scalar_tb);
@@ -315,6 +328,26 @@ private: System::Windows::Forms::Label^ p_firstDequeLabel;
 			this->floatPage->Size = System::Drawing::Size(427, 403);
 			this->floatPage->TabIndex = 0;
 			this->floatPage->Text = L"float";
+			// 
+			// f_elemToFind_txtbox
+			// 
+			this->f_elemToFind_txtbox->Location = System::Drawing::Point(148, 344);
+			this->f_elemToFind_txtbox->Name = L"f_elemToFind_txtbox";
+			this->f_elemToFind_txtbox->Size = System::Drawing::Size(39, 22);
+			this->f_elemToFind_txtbox->TabIndex = 42;
+			// 
+			// f_FindElem_btn
+			// 
+			this->f_FindElem_btn->AutoSize = true;
+			this->f_FindElem_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->f_FindElem_btn->Location = System::Drawing::Point(14, 339);
+			this->f_FindElem_btn->Name = L"f_FindElem_btn";
+			this->f_FindElem_btn->Size = System::Drawing::Size(119, 30);
+			this->f_FindElem_btn->TabIndex = 41;
+			this->f_FindElem_btn->Text = L"Find in deque";
+			this->f_FindElem_btn->UseVisualStyleBackColor = true;
+			this->f_FindElem_btn->Click += gcnew System::EventHandler(this, &MyForm::f_FindElem_btn_Click);
 			// 
 			// f_resultLabel
 			// 
@@ -717,6 +750,8 @@ private: System::Windows::Forms::Label^ p_firstDequeLabel;
 			// polynomPage
 			// 
 			this->polynomPage->BackColor = System::Drawing::Color::LightSlateGray;
+			this->polynomPage->Controls->Add(this->p_elemToFind_txtbox);
+			this->polynomPage->Controls->Add(this->p_findElem_btn);
 			this->polynomPage->Controls->Add(this->p_resultLabel);
 			this->polynomPage->Controls->Add(this->label7);
 			this->polynomPage->Controls->Add(this->p_scalar_txtbox);
@@ -945,6 +980,26 @@ private: System::Windows::Forms::Label^ p_firstDequeLabel;
 			this->p_firstDequeLabel->Size = System::Drawing::Size(212, 29);
 			this->p_firstDequeLabel->TabIndex = 23;
 			// 
+			// p_elemToFind_txtbox
+			// 
+			this->p_elemToFind_txtbox->Location = System::Drawing::Point(145, 344);
+			this->p_elemToFind_txtbox->Name = L"p_elemToFind_txtbox";
+			this->p_elemToFind_txtbox->Size = System::Drawing::Size(39, 22);
+			this->p_elemToFind_txtbox->TabIndex = 44;
+			// 
+			// p_findElem_btn
+			// 
+			this->p_findElem_btn->AutoSize = true;
+			this->p_findElem_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->p_findElem_btn->Location = System::Drawing::Point(11, 339);
+			this->p_findElem_btn->Name = L"p_findElem_btn";
+			this->p_findElem_btn->Size = System::Drawing::Size(119, 30);
+			this->p_findElem_btn->TabIndex = 43;
+			this->p_findElem_btn->Text = L"Find in deque";
+			this->p_findElem_btn->UseVisualStyleBackColor = true;
+			this->p_findElem_btn->Click += gcnew System::EventHandler(this, &MyForm::p_findElem_btn_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -975,6 +1030,8 @@ private: System::Windows::Forms::Label^ p_firstDequeLabel;
 	private: int FloatSelectedIndex;
 	private: int BoolSelectedIndex;
 	private: int PolynomSelectedIndex;
+
+    
 
 	private: System::Void OnFloatChangeCheck(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void OnBoolChangeCheck(System::Object^ sender, System::EventArgs^ e);
@@ -1020,5 +1077,7 @@ private: System::Void p_clean_btn_Click(System::Object^ sender, System::EventArg
 private: System::Void p_avg_btn_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void p_subtractDeque_btn_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void p_addDeque_btn_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void f_FindElem_btn_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void p_findElem_btn_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

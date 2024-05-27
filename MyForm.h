@@ -91,9 +91,9 @@ namespace Lab10 {
 
 
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::TextBox^ b_scalar_txtbox;
 
-	private: System::Windows::Forms::Button^ b_Multiply_btn;
+
+
 
 	private: System::Windows::Forms::Button^ b_subtractDeque_btn;
 
@@ -239,8 +239,6 @@ private: System::Windows::Forms::Label^ p_firstDequeLabel;
 			this->boolPage = (gcnew System::Windows::Forms::TabPage());
 			this->b_resultLabel = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->b_scalar_txtbox = (gcnew System::Windows::Forms::TextBox());
-			this->b_Multiply_btn = (gcnew System::Windows::Forms::Button());
 			this->b_subtractDeque_btn = (gcnew System::Windows::Forms::Button());
 			this->b_addDeque_btn = (gcnew System::Windows::Forms::Button());
 			this->b_secondDeque_rb = (gcnew System::Windows::Forms::RadioButton());
@@ -526,8 +524,6 @@ private: System::Windows::Forms::Label^ p_firstDequeLabel;
 			this->boolPage->BackColor = System::Drawing::Color::LightSlateGray;
 			this->boolPage->Controls->Add(this->b_resultLabel);
 			this->boolPage->Controls->Add(this->label2);
-			this->boolPage->Controls->Add(this->b_scalar_txtbox);
-			this->boolPage->Controls->Add(this->b_Multiply_btn);
 			this->boolPage->Controls->Add(this->b_subtractDeque_btn);
 			this->boolPage->Controls->Add(this->b_addDeque_btn);
 			this->boolPage->Controls->Add(this->b_secondDeque_rb);
@@ -567,26 +563,6 @@ private: System::Windows::Forms::Label^ p_firstDequeLabel;
 			this->label2->Size = System::Drawing::Size(56, 29);
 			this->label2->TabIndex = 39;
 			this->label2->Text = L"Res";
-			// 
-			// b_scalar_txtbox
-			// 
-			this->b_scalar_txtbox->Location = System::Drawing::Point(324, 239);
-			this->b_scalar_txtbox->Name = L"b_scalar_txtbox";
-			this->b_scalar_txtbox->Size = System::Drawing::Size(39, 22);
-			this->b_scalar_txtbox->TabIndex = 38;
-			// 
-			// b_Multiply_btn
-			// 
-			this->b_Multiply_btn->AutoSize = true;
-			this->b_Multiply_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->b_Multiply_btn->Location = System::Drawing::Point(242, 231);
-			this->b_Multiply_btn->Name = L"b_Multiply_btn";
-			this->b_Multiply_btn->Size = System::Drawing::Size(76, 30);
-			this->b_Multiply_btn->TabIndex = 37;
-			this->b_Multiply_btn->Text = L"Multiply";
-			this->b_Multiply_btn->UseVisualStyleBackColor = true;
-			this->b_Multiply_btn->Click += gcnew System::EventHandler(this, &MyForm::b_Multiply_btn_Click);
 			// 
 			// b_subtractDeque_btn
 			// 
@@ -649,7 +625,7 @@ private: System::Windows::Forms::Label^ p_firstDequeLabel;
 			this->b_clean_btn->AutoSize = true;
 			this->b_clean_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->b_clean_btn->Location = System::Drawing::Point(243, 267);
+			this->b_clean_btn->Location = System::Drawing::Point(242, 231);
 			this->b_clean_btn->Name = L"b_clean_btn";
 			this->b_clean_btn->Size = System::Drawing::Size(62, 30);
 			this->b_clean_btn->TabIndex = 31;
@@ -1030,7 +1006,6 @@ private: System::Void b_addRight_btn_Click(System::Object^ sender, System::Event
 private: System::Void b_deleteLeft_btn_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void b_deleteRight_btn_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void b_Size_btn_Click(System::Object^ sender, System::EventArgs^ e);
-private: System::Void b_Multiply_btn_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void b_clean_btn_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void b_addDeque_btn_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void b_subtractDeque_btn_Click(System::Object^ sender, System::EventArgs^ e);

@@ -349,13 +349,6 @@ System::Void Lab10::MyForm::b_Size_btn_Click(System::Object^ sender, System::Eve
 	MessageBox::Show("Deque contains " + Convert::ToString(boolDeque[BoolSelectedIndex].get_maxsize()) + " elements");
 }
 
-System::Void Lab10::MyForm::b_Multiply_btn_Click(System::Object^ sender, System::EventArgs^ e)
-{
-	double Scalar = Convert::ToDouble(b_scalar_txtbox->Text);
-	boolDeque[BoolSelectedIndex] = std::move(boolDeque[BoolSelectedIndex] * Scalar);
-	UpdateBoolDequeLabel();
-}
-
 System::Void Lab10::MyForm::b_clean_btn_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	boolDeque[BoolSelectedIndex].Clean();
@@ -466,7 +459,7 @@ System::Void Lab10::MyForm::p_Size_btn_Click(System::Object^ sender, System::Eve
 
 System::Void Lab10::MyForm::p_multiply_btn_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	double Scalar = Convert::ToDouble(b_scalar_txtbox->Text);
+	double Scalar = Convert::ToDouble(p_scalar_txtbox->Text);
 	polynomDeque[PolynomSelectedIndex] = std::move(polynomDeque[PolynomSelectedIndex] * Scalar);
 	UpdatePolynomDequeLabel();
 }

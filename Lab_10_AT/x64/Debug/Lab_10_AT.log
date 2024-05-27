@@ -24,5 +24,7 @@ C:\Users\Roman\Labs\Lab_10_AT\deque.h(249,35): warning C4244:         ]
   		C:\Users\Roman\Labs\Lab_10_AT\MyForm.cpp(255,33):
   		see the first reference to 'CDeque<float>::operator *' in 'Lab10::MyForm::f_productBy_btn_Click'
   
+  main.cpp
+  Generating Code...
   Exception.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Lab_10_AT.vcxproj -> C:\Users\Roman\Labs\Lab_10_AT\x64\Debug\Lab_10_AT.exe
